@@ -82,4 +82,30 @@ class Controller extends BaseController
             return print_r($e->getMessage());
         }
     }
+
+    public function callService($url = '')
+    {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FAILONERROR, true);
+
+        $response = curl_exec($ch);
+        $err = curl_error($ch);
+        curl_close($ch);
+
+        if ($err)
+        {
+            $result = json_decode(json_encode([
+                'status' => 'error',
+                'message' => $err
+            ]), true);
+        }
+        else
+        {
+            $result = json_decode($response);
+        }
+        return $result;
+    }
 }

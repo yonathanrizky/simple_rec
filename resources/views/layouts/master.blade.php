@@ -43,15 +43,37 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-            {{-- @foreach ($menuItems as $value) --}}
             <li class="nav-item">
                 <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Dashboard</span></a>
             </li>
-            <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-            {{-- @endforeach --}}
+
+            <!-- Untuk Posting Lowongan & Lowongan Aktif -->
+            <li class="nav-item">
+                <a class="nav-link" href="/recuitment">
+                    <i class="fas fa-fw fa-laptop-house"></i>
+                    <span>Recuitment</span></a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Untuk List Undangan Interview Aktif -->
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">
+                    <i class="fas fa-fw fa-tasks"></i>
+                    <span>Undangan Wawancara</span></a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Untuk Recuitment Kadaluarsa -->
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">
+                    <i class="fas fa-fw fa-history"></i>
+                    <span>History Recuitment</span></a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('logout') }}">
                     <i class="fas fa-fw fa-sign-out-alt"></i>

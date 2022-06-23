@@ -20,4 +20,6 @@ Route::middleware(['auth'])->group(function ()
 {
     Route::get('/logout', 'LoginController@logout')->name('logout');
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+    Route::get('/recuitment', 'RecuitmentController@index');
 });
