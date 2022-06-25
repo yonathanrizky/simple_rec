@@ -1,4 +1,9 @@
 @extends('layouts.master')
 @section('content')
     <h1 class="h3 mb-4 text-gray-800">Selamat Datang Dashboard</h1>
+    <div class="row">
+        <div class="col-md-12">
+            {!! $data->description !!}
+        </div>
+    </div>
 @endsection

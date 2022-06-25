@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Vacancy;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard.index');
+        $data = Vacancy::find(2);
+        return view('dashboard.index', compact('data'));
     }
 }

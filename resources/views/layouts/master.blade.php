@@ -192,6 +192,11 @@
     <script type="text/javascript">
         let messageValidation = "Input Tidak Boleh Kosong";
     </script>
+
+    {{-- <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script> --}}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.4.7/standard-all/ckeditor.js"></script>
+    <script src="http://cdn.ckeditor.com/4.4.7/standard-all/adapters/jquery.js"></script>
     @yield('js-content')
 </body>
 

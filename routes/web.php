@@ -22,4 +22,6 @@ Route::middleware(['auth'])->group(function ()
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
     Route::get('/recuitment', 'RecuitmentController@index');
+    Route::get('/recuitment/create', 'RecuitmentController@create');
+    Route::post('/recuitment/store', 'RecuitmentController@store');
 });
