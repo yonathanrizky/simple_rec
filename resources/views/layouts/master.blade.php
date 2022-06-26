@@ -173,8 +173,8 @@
         <i class="fas fa-angle-up"></i>
     </a>
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
-    {{-- <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script> --}}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    {{-- <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script> --}}
 
     <!-- Core plugin JavaScript-->
     <script src="{{ asset('assets/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
@@ -193,8 +193,6 @@
         let messageValidation = "Input Tidak Boleh Kosong";
     </script>
 
-    {{-- <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script> --}}
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="//cdn.ckeditor.com/4.4.7/standard-all/ckeditor.js"></script>
     <script src="http://cdn.ckeditor.com/4.4.7/standard-all/adapters/jquery.js"></script>
     @yield('js-content')

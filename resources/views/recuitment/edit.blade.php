@@ -8,15 +8,16 @@
                         <div class="col-lg-12">
                             <div class="p-5">
                                 <div class="text-left">
-                                    <h1 class="h4 text-gray-900 mb-4">Tambah Data Recuitment</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Ubah Data Recuitment</h1>
                                 </div>
                                 @if (session('error'))
                                     <div class="alert alert-danger">
                                         <b>Opps!</b> {{ session('error') }}
                                     </div>
                                 @endif
-                                <form class="input" action="{{ url('/recuitment/store') }}" method="POST">
+                                <form class="input" action="{{ url('/recuitment/update', $data->id) }}" method="POST">
                                     @csrf
+                                    @method('PATCH')
                                     @include('recuitment.input')
                                     <div class="float-right mt-3">
                                         <div class="row">

@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $data = Vacancy::find(2);
+        $data = Vacancy::find(9);
         return view('dashboard.index', compact('data'));
     }
 }

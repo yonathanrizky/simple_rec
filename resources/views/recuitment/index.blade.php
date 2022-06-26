@@ -25,13 +25,13 @@
         </table>
     </div>
 @endsection
-{{-- @section('js-content')
+@section('js-content')
     <script type="text/javascript">
         $(document).ready(function() {
             $('#table-career').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: '{{ url('GPRO009/getData') }}',
+                ajax: '{{ url('recuitment/getData') }}',
                 columns: [{
                         width: '10%',
                         render: function(data, type, row, meta) {
@@ -39,14 +39,23 @@
                         },
                     },
                     {
-                        data: 'description'
+                        data: 'job_name'
+                    },
+                    {
+                        data: 'count_not_process'
+                    },
+                    {
+                        data: 'count_invite'
+                    },
+                    {
+                        data: 'count_reject'
                     },
                     {
                         width: '10%',
                         render: function(data, type, row) {
                             var s =
-                                `<a href='{{ url('GPRO009/edit/${row.id}') }}' class='btn btn-success btn-circle'><i class="fas fa-clipboard"></i></a>
-                                 <a href='{{ url('GPRO009/delete/${row.id}') }}' class='btn btn-danger btn-circle'><i class='fas fa-trash'></i></a>
+                                `<a href='{{ url('recuitment/edit/${row.id}') }}' class='btn btn-success btn-circle'><i class="fas fa-clipboard"></i></a>
+                                 <a href='{{ url('recuitment/delete/${row.id}') }}' class='btn btn-danger btn-circle'><i class='fas fa-trash'></i></a>
                             `;
                             return s;
                         },
@@ -55,4 +64,4 @@
             });
         });
     </script>
-@endsection --}}
+@endsection

@@ -22,6 +22,10 @@ Route::middleware(['auth'])->group(function ()
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
     Route::get('/recuitment', 'RecuitmentController@index');
+    Route::get('/recuitment/getData', 'RecuitmentController@getData');
     Route::get('/recuitment/create', 'RecuitmentController@create');
     Route::post('/recuitment/store', 'RecuitmentController@store');
+    Route::get('/recuitment/edit/{id}', 'RecuitmentController@show');
+    Route::patch('/recuitment/update/{id}', 'RecuitmentController@update');
+    Route::get('/recuitment/delete/{id}', 'RecuitmentController@destroy');
 });
